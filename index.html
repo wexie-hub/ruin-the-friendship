@@ -21,16 +21,19 @@
   /* ── Notification Window ── */
   #notification-window {
     width: min(280px, 90vw);
-    background: #1e3a2f;
-    border: 1px solid #3a5a47;
+    background: #24123F;
+    border: 1px solid #8B5CF6;
+    box-shadow:
+      0 0 10px rgba(139, 92, 246, 0.4),
+      0 0 25px rgba(139, 92, 246, 0.2);
     border-radius: 4px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
     overflow: hidden;
     font-family: 'Segoe UI', sans-serif;
   }
 
   .win-titlebar {
-    background: #2a4a38;
+    background: #3A2B63;
+    border-bottom: 1px solid #8B5CF6;
     padding: 6px 10px;
     display: flex;
     align-items: center;
@@ -40,7 +43,7 @@
 
   .win-titlebar-title {
     font-size: 11px;
-    color: #a8c8b8;
+    color: #F0E6FF;
     letter-spacing: 0.3px;
   }
 
@@ -59,14 +62,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #7C3AED;
     color: transparent;
-    background: #4a7a5a;
   }
 
-  .win-btn:hover { color: #1e3a2f; }
-  .win-btn.close { background: #6a4a4a; }
-  .win-btn.minimize { background: #6a6a3a; }
-  .win-btn.maximize { background: #3a6a4a; }
+  .win-btn:hover { color: #FFFFFF; }
+  .win-btn.close { background: #C026D3; }
+  .win-btn.minimize { background: #8B5CF6; }
+  .win-btn.maximize  {background: #A855F7; }
 
   .notif-body {
     padding: 30px 24px 24px;
@@ -84,7 +87,9 @@
 
   .notif-bell {
     font-size: 28px;
-    filter: grayscale(0.3);
+    filter:
+      drop-shadow(0 0 8px rgba(192,132,252,0.8))
+      saturate(1.2);
   }
 
   .notif-title {
@@ -95,10 +100,10 @@
   }
 
   .btn-open {
-    background: #4a9a5a;
-    color: #d0f0d8;
-    border: none;
-    border-radius: 3px;
+    background: #8B5CF6;
+    color: #F5F3FF;
+    border: 1px solid #C084FC;
+    box-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
     padding: 10px 32px;
     font-size: 16px;
     font-weight: 600;
@@ -107,7 +112,11 @@
     transition: background 0.15s;
   }
 
-  .btn-open:hover { background: #5ab56a; }
+  .btn-open:hover { 
+    background: #A855F7;
+    box-shadow:
+      0 0 10px rgba(192, 132, 252, 0.7),
+      0 0 20px rgba(168, 85, 247, 0.5); }
 
   /* ── Question Dialog ── */
   #question-dialog {
@@ -159,7 +168,10 @@
     font-size: 26px;
     font-style: italic;
     font-weight: 700;
-    color: #c8e8d0;
+    color: #F0E6FF;
+    text-shadow:
+      0 0 10px rgba(233,213,255,0.5),
+      0 0 20px rgba(192,132,252,0.3);
     text-align: center;
     line-height: 1.2;
   }
@@ -170,10 +182,10 @@
   }
 
   .btn-no, .btn-ok {
-    background: #4a9a5a;
-    color: #d0f0d8;
-    border: none;
-    border-radius: 3px;
+    background: #8B5CF6;
+    color: #F5F3FF;
+    border: 1px solid #C084FC;
+    box-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
     padding: 10px 36px;
     font-size: 16px;
     font-weight: 700;
@@ -182,7 +194,12 @@
     transition: background 0.15s;
   }
 
-  .btn-no:hover, .btn-ok:hover { background: #5ab56a; }
+  .btn-no:hover, .btn-ok:hover {
+    background: #A855F7;
+    box-shadow:
+      0 0 10px rgba(192, 132, 252, 0.7),
+      0 0 20px rgba(168, 85, 247, 0.5);
+  }
 
   /* ── Lyrics Screen ── */
   #lyrics-screen {
