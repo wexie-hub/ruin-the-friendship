@@ -20,7 +20,7 @@
 
   /* ── Notification Window ── */
   #notification-window {
-    width: 280px;
+    width: min(280px, 90vw);
     background: #1e3a2f;
     border: 1px solid #3a5a47;
     border-radius: 4px;
@@ -123,7 +123,7 @@
   #question-dialog.visible { display: flex; }
 
   .dialog-window {
-    width: 320px;
+    width: min(320px, 92vw);
     background: #1e3a2f;
     border: 1px solid #3a5a47;
     border-radius: 4px;
@@ -239,7 +239,9 @@
       0 0 8px rgba(125, 232, 200, 0.7),
       0 0 20px rgba(125, 232, 200, 0.3);
     padding: 0 40px;
-    white-space: nowrap;
+    white-space: normal;
+    max-width: 90vw;
+    margin: 0 auto;
     pointer-events: none;
     transition: opacity 2s ease;
     opacity: 1;
